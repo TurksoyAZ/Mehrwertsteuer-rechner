@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <section>
+        <form action="#" onsubmit="return false">
+          <fieldset>
+            <div>
+
+              <label for="brutto">
+                Was soll berechnet werden? <br />
+
+                <input type="radio" name="Mehrwertsteuer"  id="netto"   required/>
+                Mehrwertsteuer aufschlagen(Netto zu Brutto) <br />
+                
+                <input type="radio" name="Mehrwertsteuer" id="brutto"  required />
+                Mehrwertsteuer abziehen (Brutto zu Netto)
+              </label>
+
+            </div>
+
+            <div>
+              <label for="percent19">Mehrwertsteuersatz <br />
+                
+                <input type="radio" name="Mehrwertsteuersatz" id="percent19"  required  />
+                19%
+                <input type="radio" name="Mehrwertsteuersatz" id="percent7"   required />
+                7%
+              </label>
+            </div>
+
+            <div>
+              <label for="textInput"
+                >Nettobetrag(Preis ohne Mehrwertsteuer) in Euro <b>*</b> <br />
+                <input type="text" name="text" id="textInput" required/>
+                
+              </label>
+            </div>
+
+            <div>
+              <input type="submit" value="BERECHNEN" onclick="sendInfo()" />
+            </div>
+
+            <hr />
+
+            <div>
+              <h5>Ergebnis</h5>
+            </div>
+
+            <div>
+              <p>Mehrwertsteuerbetrag</p>
+              <span id="output1">0</span>
+            </div>
+
+            <div>
+              <p>Bruttobetrag (Endpreis)</p>
+              <span id="output2">0</span>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <!-- External script -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
