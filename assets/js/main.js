@@ -18,7 +18,7 @@ function choose() {
 
   if (netto.checked)
     forText.innerHTML = "Nettobetrag (Preis ohne Mehrwersteuer) in Euro <b>*</b>";
-     
+  
   else if (brutto.checked)
     forText.innerHTML = "Bruttobetrag (Preis inkulisive Mehrwersteuer) in Euro <b>*</b>";
       
@@ -50,7 +50,7 @@ function sendInfo() {
     brutto_or_netto.innerHTML= "Bruttobetrag (Endpreis)" 
 
   } else if (brutto.checked && percent19.checked) {
-    let a2 = (textInput.value / 119) * 19;
+    let a2 = textInput.value / 119 * 19;
     let b2 = textInput.value / 1.19;
     let c2 = a2.toFixed(2) + "".concat(" €");
     let e2 = c2.replace(".", ",");
@@ -61,7 +61,7 @@ function sendInfo() {
     brutto_or_netto.innerHTML= "Nettobetrag" 
 
   } if (brutto.checked && percent7.checked) {
-    let a3 = (textInput.value / 107) * 7;
+    let a3 = textInput.value / 107 * 7;
     let b3 = textInput.value / 1.07;
     let c3 = a3.toFixed(2) + "".concat(" €");
     let e3 = c3.replace(".", ",");
