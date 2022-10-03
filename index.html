@@ -12,21 +12,23 @@
 
     <main>
       <section>
+
+
         <form action="#" onsubmit="return false">
           <fieldset>
-            <div>
 
+            <div>
               <label for="brutto">
                 Was soll berechnet werden? <br />
 
-                <input type="radio" name="Mehrwertsteuer"  id="netto"   required/>
+                <input type="radio" name="Mehrwertsteuer"  id="netto" onchange="choose()" required/>
                 Mehrwertsteuer aufschlagen(Netto zu Brutto) <br />
                 
-                <input type="radio" name="Mehrwertsteuer" id="brutto"  required />
+                <input type="radio" name="Mehrwertsteuer" id="brutto"  onchange="choose()" required />
                 Mehrwertsteuer abziehen (Brutto zu Netto)
               </label>
-
             </div>
+
 
             <div>
               <label for="percent19">Mehrwertsteuersatz <br />
@@ -38,35 +40,45 @@
               </label>
             </div>
 
+
             <div>
-              <label for="textInput"
-                >Nettobetrag(Preis ohne Mehrwertsteuer) in Euro <b>*</b> <br />
-                <input type="text" name="text" id="textInput" required/>
+              <label for="textInput">
+                
+               <p id="forText"></p>
+                <input type="number" name="text" id="textInput" required/>
                 
               </label>
             </div>
+
 
             <div>
               <input type="submit" value="BERECHNEN" onclick="sendInfo()" />
             </div>
 
+
             <hr />
+
 
             <div>
               <h5>Ergebnis</h5>
             </div>
+
 
             <div>
               <p>Mehrwertsteuerbetrag</p>
               <span id="output1">0</span>
             </div>
 
+
             <div>
               <p>Bruttobetrag (Endpreis)</p>
               <span id="output2">0</span>
             </div>
+
           </fieldset>
         </form>
+
+
       </section>
     </main>
 
