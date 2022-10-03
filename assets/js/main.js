@@ -10,7 +10,7 @@ let output1 = document.getElementById("output1");
 let output2 = document.getElementById("output2");
 
 let forText = document.getElementById("forText");
-
+let brutto_or_netto=document.getElementById("brutto_or_netto")
 
 
 
@@ -35,6 +35,8 @@ function sendInfo() {
     let f = d.replace(".", ",");
     output1.innerHTML = e;
     output2.innerHTML = f;
+    brutto_or_netto.innerHTML= "Bruttobetrag (Endpreis)" 
+
 
   } else if (netto.checked && percent7.checked) {
     let a1 = textInput.value * 0.07;
@@ -45,6 +47,7 @@ function sendInfo() {
     let f1 = d1.replace(".", ",");
     output1.innerHTML = e1;
     output2.innerHTML = f1;
+    brutto_or_netto.innerHTML= "Bruttobetrag (Endpreis)" 
 
   } else if (brutto.checked && percent19.checked) {
     let a2 = (textInput.value / 119) * 19;
@@ -55,6 +58,7 @@ function sendInfo() {
     let f2 = d2.replace(".", ",");
     output1.innerHTML = e2;
     output2.innerHTML = f2;
+    brutto_or_netto.innerHTML= "Nettobetrag" 
 
   } if (brutto.checked && percent7.checked) {
     let a3 = (textInput.value / 107) * 7;
@@ -65,6 +69,7 @@ function sendInfo() {
     let f3 = d3.replace(".", ",");
     output1.innerHTML = e3;
     output2.innerHTML = f3;
+    brutto_or_netto.innerHTML= "Nettobetrag" 
 
   }
 
