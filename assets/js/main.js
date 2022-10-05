@@ -29,48 +29,33 @@ function sendInfo() {
   if (netto.checked && percent19.checked) {
     let a = textInput.value * 0.19;
     let b = textInput.value * 1.19;
-    let c = a.toFixed(2) + "".concat(" €");
-    let e = c.replace(".", ",");
-    let d = b.toFixed(2) + "".concat(" €");
-    let f = d.replace(".", ",");
-    output1.innerHTML = e;
-    output2.innerHTML = f;
-    brutto_or_netto.innerHTML= "Bruttobetrag (Endpreis)" 
+    output1.innerHTML = a.toFixed(2).replace(".",",")+" €";
+    output2.innerHTML = b.toFixed(2).replace(".",",")+" €";
+    brutto_or_netto.innerHTML= "Bruttobetrag (Endpreis)";
 
 
   } else if (netto.checked && percent7.checked) {
     let a1 = textInput.value * 0.07;
     let b1 = textInput.value * 1.07;
-    let c1 = a1.toFixed(2) + "".concat(" €");
-    let e1 = c1.replace(".", ",");
-    let d1 = b1.toFixed(2) + "".concat(" €");
-    let f1 = d1.replace(".", ",");
-    output1.innerHTML = e1;
-    output2.innerHTML = f1;
-    brutto_or_netto.innerHTML= "Bruttobetrag (Endpreis)" 
+    output1.innerHTML = a1.toFixed(2).replace(".",",")+ " €";
+    output2.innerHTML = b1.toFixed(2).replace(".",",")+ " €";
+    brutto_or_netto.innerHTML= "Bruttobetrag (Endpreis)";
+
 
   } else if (brutto.checked && percent19.checked) {
     let a2 = textInput.value / 119 * 19;
     let b2 = textInput.value / 1.19;
-    let c2 = a2.toFixed(2) + "".concat(" €");
-    let e2 = c2.replace(".", ",");
-    let d2 = b2.toFixed(2) + "".concat(" €");
-    let f2 = d2.replace(".", ",");
-    output1.innerHTML = e2;
-    output2.innerHTML = f2;
-    brutto_or_netto.innerHTML= "Nettobetrag" 
+    output1.innerHTML = a2.toFixed(2).replace(".",",")+" €";
+    output2.innerHTML = b2.toFixed(2).replace(".",",")+" €";
+    brutto_or_netto.innerHTML= "Nettobetrag"; 
+
 
   } if (brutto.checked && percent7.checked) {
     let a3 = textInput.value / 107 * 7;
     let b3 = textInput.value / 1.07;
-    let c3 = a3.toFixed(2) + "".concat(" €");
-    let e3 = c3.replace(".", ",");
-    let d3 = b3.toFixed(2) + "".concat(" €");
-    let f3 = d3.replace(".", ",");
-    output1.innerHTML = e3;
-    output2.innerHTML = f3;
-    brutto_or_netto.innerHTML= "Nettobetrag" 
-
+    output1.innerHTML = a3.toFixed(2).replace(".",",")+ " €";
+    output2.innerHTML = b3.toFixed(2).replace(".",",")+ " €";
+    brutto_or_netto.innerHTML= "Nettobetrag"; 
   }
 
 }
